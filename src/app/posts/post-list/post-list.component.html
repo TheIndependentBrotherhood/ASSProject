@@ -1,4 +1,5 @@
-<mat-accordion multi="true" *ngIf="posts.length > 0">
+<!-- <mat-accordion multi="true" *ngIf="posts.length > 0"></mat-accordion> Multi open-->
+<mat-accordion *ngIf="posts.length > 0">
   <mat-expansion-panel *ngFor="let post of posts">
     <mat-expansion-panel-header>
       {{ post.title }}
