@@ -7,7 +7,7 @@ import {
   , MatCardModule
   , MatButtonModule
   , MatToolbarModule
-  , MatExpansionModule, MatSidenavModule, MatIconModule, MatListModule
+  , MatExpansionModule, MatSidenavModule, MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -15,13 +15,14 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DataTableComponent } from './data-table/data-table.component';
 
 @NgModule({
   declarations: [
     AppComponent
     , PostCreateComponent
     , PostListComponent
-    , MainNavComponent
+    , MainNavComponent, DataTableComponent
   ],
   imports: [
     BrowserModule
@@ -36,6 +37,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     , MatSidenavModule
     , MatIconModule
     , MatListModule
+    , MatTableModule
+    , MatPaginatorModule
+    , MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
