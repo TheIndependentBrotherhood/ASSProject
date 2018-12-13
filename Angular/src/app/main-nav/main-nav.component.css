@@ -12,11 +12,16 @@
 }
 
 .spacer {
-  flex: 1 1 auto;
+  position: absolute;
+  right: 1rem;
 }
 
 .header {
   color: white;
+}
+
+.mat-nav-list > hr {
+  color: lightgrey;
 }
 
 .mat-drawer-side {
