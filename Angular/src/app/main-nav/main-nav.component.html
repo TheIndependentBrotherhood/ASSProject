@@ -7,6 +7,7 @@
     <mat-nav-list>
       <a mat-list-item [routerLink]="['/']">Items</a>
       <a mat-list-item [routerLink]="['/posts']">Posts</a>
+      <a mat-list-item [routerLink]="['/create']">New Post</a>
       <hr>
       <a mat-list-item href="#">Other</a>
     </mat-nav-list>
@@ -21,10 +22,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="header">ASS Project</span>
-      <button class="spacer" mat-icon-button [routerLink]="['/basket']">
-        <mat-icon svgIcon="cart" aria-label="View your basket"></mat-icon>
-      </button>
+      <span class="header">The Independent Brotherhood</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
