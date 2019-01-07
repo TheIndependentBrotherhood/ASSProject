@@ -3,7 +3,6 @@ import { Subscription } from 'rxjs';
 
 import { Post } from '../post.model';
 import { PostsService } from '../posts.service';
-import { PortalHostDirective } from '@angular/cdk/portal';
 
 @Component ({
   selector: 'app-post-list'
@@ -34,6 +33,6 @@ export class PostListComponent implements OnInit, OnDestroy {
   }
 
   onDelete(postId: string) {
-    this.postsService.deletePost(PortalHostDirective);
+    this.postsService.deletePost(postId);
   }
 }
