@@ -16,6 +16,7 @@ import {
   , MatPaginatorModule
   , MatSortModule
   , MatProgressSpinnerModule
+  , MatDialogModule
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -27,6 +28,8 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { ErrorComponent } from './error/error.component';
+
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { ErrorInterceptor } from './error-interceptor';
 
@@ -40,6 +43,7 @@ import { ErrorInterceptor } from './error-interceptor';
     , DataTableComponent
     , LoginComponent
     , SignupComponent
+    , ErrorComponent
   ],
   imports: [
     BrowserModule
@@ -61,11 +65,13 @@ import { ErrorInterceptor } from './error-interceptor';
     , MatSortModule
     , MatProgressSpinnerModule
     , HttpClientModule
+    , MatDialogModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
     , { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ErrorComponent]
 })
 export class AppModule { }
