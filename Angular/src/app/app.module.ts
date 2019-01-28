@@ -26,6 +26,7 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { LoginComponent } from './auth/login/login.component';
     , MainNavComponent
     , DataTableComponent
     , LoginComponent
+    , SignupComponent
   ],
   imports: [
     BrowserModule
