@@ -22,7 +22,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="header">The Independent Brotherhood</span>
+      <span class="header">TIB</span>
       <span class="spacer"></span>
       <ul>
         <li *ngIf="!userIsAuthenticated">
@@ -34,8 +34,8 @@
         <li *ngIf="userIsAuthenticated">
           <button mat-button>Logout</button>
         </li>
-        <li>
-          <a mat-button routerLink="/basket" routerLinkActive="mat-accent">Basket</a><mat-icon>home</mat-icon>
+        <li *ngIf="userIsAuthenticated">
+          <a mat-button routerLink="/basket" routerLinkActive="mat-accent">Basket <mat-icon>shopping_cart</mat-icon></a>
         </li>
       </ul>
     </mat-toolbar>
