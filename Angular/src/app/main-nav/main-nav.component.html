@@ -25,11 +25,17 @@
       <span class="header">The Independent Brotherhood</span>
       <span class="spacer"></span>
       <ul>
-        <li>
+        <li *ngIf="!userIsAuthenticated">
           <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
         </li>
-        <li>
+        <li *ngIf="!userIsAuthenticated">
           <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Sign Up</a>
+        </li>
+        <li *ngIf="userIsAuthenticated">
+          <button mat-button>Logout</button>
+        </li>
+        <li>
+          <a mat-button routerLink="/basket" routerLinkActive="mat-accent">Basket</a><mat-icon>home</mat-icon>
         </li>
       </ul>
     </mat-toolbar>
