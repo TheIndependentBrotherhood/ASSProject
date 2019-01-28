@@ -21,6 +21,7 @@ export class MainNavComponent implements OnInit, OnDestroy {
   constructor(private breakpointObserver: BreakpointObserver, private authService: AuthService) {}
 
   ngOnInit() {
+    this.userIsAuthenticated = this.authService.getIsAuth();
     this.authListenerSubs = this.authService
       .getAuthStatusListener()
       .subscribe(isAuthenticated => {
