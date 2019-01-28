@@ -1,15 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PostCreateComponent } from './posts/post-create/post-create.component';
-import { PostListComponent } from './posts/post-list/post-list.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -20,13 +18,12 @@ import { AuthInterceptor } from './auth/auth-interceptor';
 import { ErrorInterceptor } from './error-interceptor';
 
 import { AngularMaterialModule } from './angular-material.module';
+import { PostsModule } from './posts/posts.module';
 
 
 @NgModule({
   declarations: [
     AppComponent
-    , PostCreateComponent
-    , PostListComponent
     , MainNavComponent
     , DataTableComponent
     , LoginComponent
@@ -36,12 +33,12 @@ import { AngularMaterialModule } from './angular-material.module';
   imports: [
     BrowserModule
     , AppRoutingModule
-    , ReactiveFormsModule
     , FormsModule
     , BrowserAnimationsModule
     , LayoutModule
     , HttpClientModule
     , AngularMaterialModule
+    , PostsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
