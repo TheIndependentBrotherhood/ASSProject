@@ -7,7 +7,7 @@
     <mat-nav-list>
       <a mat-list-item [routerLink]="['/']">Items</a>
       <a mat-list-item [routerLink]="['/posts']">Posts</a>
-      <a mat-list-item [routerLink]="['/create']">New Post</a>
+      <a mat-list-item [routerLink]="['/create']" *ngIf="userIsAuthenticated">New Post</a>
       <hr>
       <a mat-list-item href="#">Other</a>
     </mat-nav-list>
@@ -22,7 +22,22 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="header">The Independent Brotherhood</span>
+      <span class="header">TIB</span>
+      <span class="spacer"></span>
+      <ul>
+        <li *ngIf="!userIsAuthenticated">
+          <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
+        </li>
+        <li *ngIf="!userIsAuthenticated">
+          <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Sign Up</a>
+        </li>
+        <li *ngIf="userIsAuthenticated">
+          <button mat-button (click)="onLogout()">Logout</button>
+        </li>
+        <li *ngIf="userIsAuthenticated">
+          <a mat-button routerLink="/basket" routerLinkActive="mat-accent">Basket <mat-icon>shopping_cart</mat-icon></a>
+        </li>
+      </ul>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
