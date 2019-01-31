@@ -1,0 +1,42 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+}
+
+.hidden {
+  display: none;
+}
+
+.spacer {
+  /*position: absolute;
+  right: 1rem;*/
+  flex: 1 1 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  color: white;
+}
+
+.mat-nav-list > hr {
+  color: lightgrey;
+}
+
+.mat-drawer-side {
+  border-right: none !important;
+}
