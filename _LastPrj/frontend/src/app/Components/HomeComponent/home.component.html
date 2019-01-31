@@ -1,0 +1,19 @@
+<!-- Header -->
+<header class="masthead">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">eCommerce</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in">Bienvenue !</div>
+            <div *ngIf="!backend.isConnected" class="intro-heading text-uppercase">Ravi de vous rencontrer</div>
+            <div *ngIf="backend.isConnected" class="intro-heading text-uppercase">Comment allez-vous {{ backend.username }}?</div>
+            <a *ngIf="!backend.isConnected" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services" (click)="connect()">Se Connecter</a>
+            <a *ngIf="!backend.isConnected"class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services" (click)="register()">S'inscrire</a>
+            <a *ngIf="backend.isConnected"class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services" (click)="addArticle()">Ajouter un article</a>
+        </div>
+    </div>
+</header>

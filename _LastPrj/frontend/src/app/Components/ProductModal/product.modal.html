@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content>
+    <img width="200px" height="200px" [src]="data.photo_url">
+    <p>{{data.description}}</p>
+    <p>{{data.price}}</p>
+</div>
+<div mat-dialog-actions>
+    <button class="btn btn-primary" (click)="onNoClick()">No Thanks</button>
+    <button class="btn btn-primary" (click)="addToBasket()" cdkFocusInitial>Ok</button>
+</div>

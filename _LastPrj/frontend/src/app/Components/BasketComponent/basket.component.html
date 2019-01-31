@@ -1,0 +1,16 @@
+  <section id="services" *ngIf="productInBasket">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Panier</h2>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let product of productInBasket" class="col-md-2 col-sm-2 portfolio-item">
+            <img class="img-fluid img-thumbnail" [src]="product.photo_url" alt="">
+            <button class="btn" (click)="delete(product)">Supprimer</button>
+        </div>
+    </div>
+    </div>
+  </section>

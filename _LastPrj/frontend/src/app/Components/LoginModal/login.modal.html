@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Se connecter</h1>
+<div mat-dialog-content>
+    <label>E-Mail : </label><input type="email" [(ngModel)]="email"><br>
+    <label>Password : </label><input type="password" [(ngModel)]="password">
+</div>
+<div mat-dialog-actions>
+    <button class="btn btn-primary" (click)="onNoClick()">No Thanks</button>
+    <button class="btn btn-primary" (click)="connect()" cdkFocusInitial>Ok</button>
+</div>
